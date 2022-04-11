@@ -15,9 +15,7 @@ public interface ActorMapper {
     Actor toModel(ActorEntinty model);
 
     public static Actor mapToDomain(ActorEntinty actorEntity){
-        return Actor.builder().actor_id(actorEntity.getActorId()).first_name(actorEntity.getFirstName()).last_name(actorEntity.getLastName()).last_update(actorEntity.getLastUpdate()).last_name(actorEntity.getLastName()).last_name(actorEntity.getLastName())
-
-                .build();
+        return Actor.builder().actor_id(actorEntity.getActorId()).first_name(actorEntity.getFirstName()).last_name(actorEntity.getLastName()).last_update(actorEntity.getLastUpdate()).last_name(actorEntity.getLastName()).last_name(actorEntity.getLastName()).build();
     }
 
     public static List<Actor> mapToDomain(List<ActorEntinty> actorEntinty){

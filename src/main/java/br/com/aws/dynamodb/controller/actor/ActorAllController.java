@@ -1,4 +1,4 @@
-package br.com.aws.dynamodb.controller;
+package br.com.aws.dynamodb.controller.actor;
 
 import br.com.aws.dynamodb.mapper.ActorMapper;
 import br.com.aws.dynamodb.response.ActorResponse;
