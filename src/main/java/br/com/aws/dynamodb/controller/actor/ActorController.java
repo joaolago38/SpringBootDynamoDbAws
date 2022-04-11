@@ -1,16 +1,16 @@
-package br.com.aws.dynamodb.controller;
+package br.com.aws.dynamodb.controller.actor;
 
 import br.com.aws.dynamodb.mapper.ActorMapper;
 import br.com.aws.dynamodb.response.ActorResponse;
 import br.com.aws.dynamodb.usecase.ActorUseCase;
-
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @RestController
