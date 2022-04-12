@@ -13,10 +13,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "city")
 public class CityEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long city_id;
+    private Integer city_id;
     @Column(name = "country_id")
     private Long countryId;
     @Column(name = "last_update")

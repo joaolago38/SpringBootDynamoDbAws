@@ -13,12 +13,13 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "customer")
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long customerId;
+    private Integer customerId;
     @Column(name = "store_id")
-    private Long storeId;
+    private Integer storeId;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")

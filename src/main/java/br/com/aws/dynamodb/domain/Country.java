@@ -10,7 +10,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 public class Country {
-    private Long  country_id;
+    private Integer  country_id;
     private String country;
     private Date last_update;
 }

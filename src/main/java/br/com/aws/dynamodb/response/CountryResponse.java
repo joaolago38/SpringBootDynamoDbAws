@@ -4,18 +4,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
 @Builder
-public class CityResponse {
+public class CountryResponse {
+    @JsonProperty(value = "countryId")
     @NotNull(message ="O campo id deve ser preenchido.")
-    @JsonProperty(value = "city_id")
-    private Integer city_id;
-    @Column(name = "country_id")
-    private Long countryId;
-    @Column(name = "last_update")
+    private Integer  countryId;
+    @JsonProperty(value = "country")
+    private String country;
+    @JsonProperty(value = "lastUpdate")
     private Date lastUpdate;
 }

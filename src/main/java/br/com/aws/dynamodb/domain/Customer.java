@@ -10,8 +10,8 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 public class Customer {
-    private Long customer_id;
-    private Long store_id;
+    private Integer customer_id;
+    private Integer store_id;
     private String first_name;
     private String last_name;
     private String email;

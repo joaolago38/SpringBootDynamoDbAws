@@ -1,8 +1,11 @@
-package br.com.aws.dynamodb.controller.city;
+package br.com.aws.dynamodb.controller.customer;
 
 import br.com.aws.dynamodb.mapper.CityMapper;
+import br.com.aws.dynamodb.mapper.CustomerMapper;
 import br.com.aws.dynamodb.response.CityResponse;
+import br.com.aws.dynamodb.response.CustomerResponse;
 import br.com.aws.dynamodb.usecase.CityUseCase;
+import br.com.aws.dynamodb.usecase.CustomerUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,16 +16,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/buscarAllCity")
-public class CityAllController {
+@RequestMapping("/buscarAllCustomer")
+public class CustomerAllController {
 
 
-    private final CityUseCase cityUsecase;
+    private final CustomerUseCase customerUseCase;
 
     @GetMapping()
-    public ResponseEntity<List<CityResponse>> consultarCityPorAll( ) {
+    public ResponseEntity<List<CustomerResponse>> consultarCustomerPorAll( ) {
 
-        List<CityResponse>  response = CityMapper.mapToResponse(cityUsecase.buscaPorCityAll());
+        List<CustomerResponse>  response = CustomerMapper.mapToResponse(customerUseCase.buscaCustomerAll());
         return ResponseEntity.ok(response);
 
 

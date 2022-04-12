@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class City {
 
-    private Long city_id;
+    private Integer city_id;
 
     private Long country_id;
 

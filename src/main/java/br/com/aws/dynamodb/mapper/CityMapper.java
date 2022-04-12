@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface CityMapper {
 
-    City toModel(CityEntity model);
 
     public static City mapToDomain(CityEntity cityEntity){
        return City.builder().city_id(cityEntity.getCity_id()).country_id(cityEntity.getCountryId()).last_update(cityEntity.getLastUpdate()).build();
@@ -28,7 +27,7 @@ public interface CityMapper {
     }
 
     public static CityResponse mapToResponse(City city) {
-        return CityResponse.builder().city_id().city_id(city.getCity_id()).countryId(city.getCountry_id()).lastUpdate(city.getLast_update()).build();
+        return CityResponse.builder().city_id(city.getCity_id()).countryId(city.getCountry_id()).lastUpdate(city.getLast_update()).build();
     }
 
 

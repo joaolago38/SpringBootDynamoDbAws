@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
 
-    Category toModel(CategoryEntity model);
+
 
     public static Category mapToDomain(CategoryEntity categoryEntity){
        return Category.builder().category_id(categoryEntity.getCategoryId()).last_update(categoryEntity.getLastUpdate()).build();
