@@ -10,8 +10,8 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 public class FilmeActor {
-    private Long actor_id;
-    private Long film_id;
+    private Integer actor_id;
+    private Integer film_id;
     private Date last_update;
 
 }

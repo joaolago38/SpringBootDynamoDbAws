@@ -9,8 +9,8 @@ import java.util.Date;
 @Data
 @Builder
 @AllArgsConstructor
-public class FilmeCategory {
-    private Long film_id;
-    private Long category_id;
+public class FilmeCategoria {
+    private Integer film_id;
+    private Integer category_id;
     private Date last_update;
 }

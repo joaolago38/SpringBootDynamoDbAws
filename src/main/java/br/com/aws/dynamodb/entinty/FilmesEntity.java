@@ -12,10 +12,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class FilmEntity {
+@Table(name = "film")
+public class FilmesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  Long filmId;
+    private  Integer filmId;
     @Column(name = "title")
     private String title;
     @Column(name = "description")

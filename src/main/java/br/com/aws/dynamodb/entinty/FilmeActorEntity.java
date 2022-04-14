@@ -17,9 +17,9 @@ import java.util.Date;
 public class FilmeActorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long actorId;
+    private Integer actorId;
     @Column(name = "film_id")
-    private Long filmId;
+    private Integer filmId;
     @Column(name = "last_update")
     private Date lastUpdate;
 }
