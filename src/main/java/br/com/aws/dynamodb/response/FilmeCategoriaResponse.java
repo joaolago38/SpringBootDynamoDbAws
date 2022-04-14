@@ -10,13 +10,12 @@ import java.util.Date;
 
 @Data
 @Builder
-public class FilmeAtorResponse {
-
-    @JsonProperty(value = "actorId")
-    @NotNull(message ="O campo id deve ser preenchido.")
-    private Integer actorId;
+public class FilmeCategoriaResponse {
     @JsonProperty(value = "filmId")
+    @NotNull(message ="O campo id deve ser preenchido.")
     private Integer filmId;
+    @JsonProperty(value = "categoryId")
+    private Integer categoryId;
     @JsonProperty(value = "lastUpdate")
     private Date lastUpdate;
 }

@@ -1,8 +1,11 @@
 package br.com.aws.dynamodb.controller.filme.actor;
 
 import br.com.aws.dynamodb.mapper.CustomerMapper;
+import br.com.aws.dynamodb.mapper.FilmeAtorMapper;
 import br.com.aws.dynamodb.response.CustomerResponse;
+import br.com.aws.dynamodb.response.FilmeAtorResponse;
 import br.com.aws.dynamodb.usecase.CustomerUseCase;
+import br.com.aws.dynamodb.usecase.FilmeActorUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,16 +16,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/buscarAllCustomer")
+@RequestMapping("/buscarAllFilmeAtor")
 public class FilmeAtorAllController {
 
 
-    private final CustomerUseCase customerUseCase;
+    private final FilmeActorUseCase filmeActorUseCase;
 
     @GetMapping()
-    public ResponseEntity<List<CustomerResponse>> consultarCustomerPorAll( ) {
+    public ResponseEntity<List<FilmeAtorResponse>> consultarFilmeAtorPorAll( ) {
 
-        List<CustomerResponse>  response = CustomerMapper.mapToResponse(customerUseCase.buscaCustomerAll());
+        List<FilmeAtorResponse>  response = FilmeAtorMapper.mapToResponse(filmeActorUseCase.buscaFilmeAtorAll());
         return ResponseEntity.ok(response);
 
 

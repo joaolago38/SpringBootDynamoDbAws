@@ -13,10 +13,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class RentalEntity {
+@Table(name = "rental")
+public class AluguelEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long rentalId;
+    private Integer rentalId;
     @Column(name = "rental_date")
     private Date rentalDate;
     @Column(name = "return_date")

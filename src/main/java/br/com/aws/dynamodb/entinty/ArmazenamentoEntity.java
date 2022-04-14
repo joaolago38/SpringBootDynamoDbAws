@@ -6,19 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
-@Data
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class FilmeCategoryEntity {
+@Table(name = "store")
+public class ArmazenamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long filmId;
-    @Column(name = "category_id")
-    private Long categoryId;
-    @Column(name = "last_update")
-    private Date lastUpdate;
+    private Long storeId;
+    @Column(name = "manager_staff_id")
+    private Long managerStaffId;
+    @Column(name = "address_id")
+    private Long addressId;
+    @Column(name = "first_name")
+    private Long lastUpdate;
 }

@@ -1,8 +1,8 @@
 package br.com.aws.dynamodb.mapper;
 
-import br.com.aws.dynamodb.domain.Customer;
-import br.com.aws.dynamodb.entinty.CustomerEntity;
-import br.com.aws.dynamodb.response.CustomerResponse;
+import br.com.aws.dynamodb.domain.FilmeActor;
+import br.com.aws.dynamodb.entinty.FilmeActorEntity;
+import br.com.aws.dynamodb.response.FilmeAtorResponse;
 import org.mapstruct.Mapper;
 
 import java.util.List;
@@ -12,29 +12,24 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface FilmeAtorMapper {
 
-    public static List<Customer> mapToDomain(List<CustomerEntity> customerEntity){
-        return customerEntity.stream().map(FilmeAtorMapper::mapToDomain).collect(Collectors.toList());
+    public static List<FilmeActor> mapToDomain(List<FilmeActorEntity> filmeActorEntity){
+        return filmeActorEntity.stream().map(FilmeAtorMapper::mapToDomain).collect(Collectors.toList());
     }
 
 
-    public static Customer mapToDomain(CustomerEntity customerEntity){
-       return Customer.builder().customer_id(customerEntity.getCustomerId())
-               .active(customerEntity.getActive()).activebool(customerEntity.getActivebool())
-               .address_id(customerEntity.getAddressId()).email(customerEntity.getEmail())
-               .create_date(customerEntity.getCreateDate()).first_name(customerEntity.getFirstName())
-               .last_name(customerEntity.getLastName()).store_id(customerEntity.getStoreId()).build();
+    public static FilmeActor mapToDomain(FilmeActorEntity filmeActorEntity){
+       return FilmeActor.builder().actor_id(filmeActorEntity.getActorId()).film_id(filmeActorEntity.getFilmId())
+               .last_update(filmeActorEntity.getLastUpdate()).build();
     }
 
 
 
-    public static List<CustomerResponse> mapToResponse(List<Customer>country) {
-        return country.stream().map(FilmeAtorMapper::mapToResponse).collect(Collectors.toList());
+    public static List<FilmeAtorResponse> mapToResponse(List<FilmeActor>filmeActor) {
+        return filmeActor.stream().map(FilmeAtorMapper::mapToResponse).collect(Collectors.toList());
     }
 
-    public static CustomerResponse mapToResponse(Customer customer) {
-        return CustomerResponse.builder().customerId(customer.getCustomer_id()).active(customer.getActive())
-                .activebool(customer.getActivebool()).email(customer.getEmail()).firstName(customer.getFirst_name())
-                .createDate(customer.getCreate_date()).storeId(customer.getStore_id()).build();
+    public static FilmeAtorResponse mapToResponse(FilmeActor filmeActor) {
+        return FilmeAtorResponse.builder().filmId(filmeActor.getActor_id()).actorId(filmeActor.getActor_id()).filmId(filmeActor.getFilm_id()).lastUpdate(filmeActor.getLast_update()).build();
     }
 
 

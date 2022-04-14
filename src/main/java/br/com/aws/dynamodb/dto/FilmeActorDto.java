@@ -8,9 +8,9 @@ import java.util.Date;
 public class FilmeActorDto {
     @JsonProperty(value = "actorId")
     @NotNull(message ="O campo id deve ser preenchido.")
-    private Long actorId;
+    private Integer actorId;
     @JsonProperty(value = "filmId")
-    private Long filmId;
+    private Integer filmId;
     @JsonProperty(value = "lastUpdate")
     private Date lastUpdate;
 }

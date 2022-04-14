@@ -1,11 +1,15 @@
-package br.com.aws.dynamodb.dto;
+package br.com.aws.dynamodb.response;
+
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
-public class FilmDto {
-
+@Data
+@Builder
+public class FilmeResponse {
     @JsonProperty(value = "filmId")
     @NotNull(message ="O campo id deve ser preenchido.")
     private  Integer filmId;
