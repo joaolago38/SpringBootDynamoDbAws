@@ -11,19 +11,13 @@ import java.util.Date;
 @Data
 @Builder
 public class ArmazenamentoResponse {
-    @JsonProperty(value = "rental_id")
+    @JsonProperty(value = "storeId")
     @NotNull(message ="O campo id deve ser preenchido.")
-    private Long rental_id;
-    @JsonProperty(value = "rentalDate")
-    private Date rentalDate;
-    @JsonProperty(value = "returnDate")
-    private Date returnDate;
-    @JsonProperty(value = "customerId")
-    private Long customerId;
-    @JsonProperty(value = "staffId")
-    private Long staffId;
-    @JsonProperty(value = "inventoryId")
-    private Long inventoryId;
+    private Long storeId;
+    @JsonProperty(value = "managerStaffId")
+    private Long managerStaffId;
+    @JsonProperty(value = "addressId")
+    private Long addressId;
     @JsonProperty(value = "lastUpdate")
-    private Date lastUpdate;
+    private Long lastUpdate;
 }

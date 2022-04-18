@@ -13,10 +13,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class InventoryEntity {
+@Table(name = "inventory")
+public class InventarioEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long inventoryId;
+    private Integer inventoryId;
     @Column(name = "film_id")
     private Long filmId;
     @Column(name = "store_id")

@@ -9,8 +9,8 @@ import java.util.Date;
 @Data
 @Builder
 @AllArgsConstructor
-public class Inventory {
-    private Long inventory_id;
+public class Inventario {
+    private Integer inventory_id;
     private Long film_id;
     private Long store_id;
     private Date last_update;

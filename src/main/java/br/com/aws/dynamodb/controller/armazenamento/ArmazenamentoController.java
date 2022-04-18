@@ -1,8 +1,11 @@
 package br.com.aws.dynamodb.controller.armazenamento;
 
 import br.com.aws.dynamodb.mapper.AluguelMapper;
+import br.com.aws.dynamodb.mapper.ArmazenamentoMapper;
 import br.com.aws.dynamodb.response.AluguelResponse;
+import br.com.aws.dynamodb.response.ArmazenamentoResponse;
 import br.com.aws.dynamodb.usecase.AluguelUseCase;
+import br.com.aws.dynamodb.usecase.ArmazenamentoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,16 +17,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/buscarArmazenamento")
+@RequestMapping("/buscarArmazenamentoId")
 public class ArmazenamentoController {
 
-    private final AluguelUseCase aluguelUseCase;
+    private final ArmazenamentoUseCase armazenamentoUseCase;
 
-    @GetMapping("/{rental_id}/aluguel")
-    public ResponseEntity<List<AluguelResponse>> consultarAlugelPorCodigId(
-            @PathVariable(name = "rental_id")Integer rental_id) {
+    @GetMapping("/{storeId}/armazenamento")
+    public ResponseEntity<List<ArmazenamentoResponse>> consultarArmazenamentoPorCodigId(
+            @PathVariable(name = "storeId")Integer storeId) {
 
-        List<AluguelResponse>  response = AluguelMapper.mapToResponse(aluguelUseCase.buscaPorRentalId(rental_id));
+        List<ArmazenamentoResponse>  response = ArmazenamentoMapper.mapToResponse(armazenamentoUseCase.buscaPorArmazenamentoId(storeId));
         return ResponseEntity.ok(response);
 
 

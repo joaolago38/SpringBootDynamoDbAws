@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Builder
@@ -16,11 +17,11 @@ import javax.persistence.*;
 public class ArmazenamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long storeId;
+    private Integer storeId;
     @Column(name = "manager_staff_id")
     private Long managerStaffId;
     @Column(name = "address_id")
     private Long addressId;
-    @Column(name = "first_name")
-    private Long lastUpdate;
+    @Column(name = "lastUpdate")
+    private Date lastUpdate;
 }

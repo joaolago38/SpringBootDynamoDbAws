@@ -16,12 +16,12 @@ public enum ErrorMessage {
     E006("0006", "Código do Filme Ator não foi encontrado"),
     E007("0007", "Código do Filme Categoria não foi encontrado"),
     E008("0008", "Código do Filme não foi encontrado"),
-    E009("0009", "Código do Inventory não foi encontrado"),
+    E009("0009", "Código do Inventario não foi encontrado"),
     E0010("0010", "Código do Language não foi encontrado"),
-    E0011("0011", "Código do Payment não foi encontrado"),
+    E0011("0011", "Código do Pagamento não foi encontrado"),
     E0012("0012", "Código do Aluguel não foi encontrado"),
     E0013("0013", "Código do Staff não foi encontrado"),
-    E0014("0014", "Código do Store não foi encontrado"),
+    E0014("0014", "Código do Armazenamento não foi encontrado"),
     E9998("E9998", "Ocorreu um erro no sistemas consulte o  Administrador");
 
 

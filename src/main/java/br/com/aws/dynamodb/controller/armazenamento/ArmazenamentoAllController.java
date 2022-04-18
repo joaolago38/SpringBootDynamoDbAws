@@ -1,8 +1,9 @@
 package br.com.aws.dynamodb.controller.armazenamento;
 
 import br.com.aws.dynamodb.mapper.AdressMapper;
-import br.com.aws.dynamodb.response.AdressResponse;
-import br.com.aws.dynamodb.usecase.AdressUseCase;
+import br.com.aws.dynamodb.mapper.ArmazenamentoMapper;
+import br.com.aws.dynamodb.response.ArmazenamentoResponse;
+import br.com.aws.dynamodb.usecase.ArmazenamentoUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,16 +14,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/buscarAllAluguel")
+@RequestMapping("/buscarAllArmazenamento")
 public class ArmazenamentoAllController {
 
 
-    private final AdressUseCase adressUseCase;
+    private final ArmazenamentoUseCase armazenamentoUseCase;
 
     @GetMapping()
-    public ResponseEntity<List<AdressResponse>> consultarAluguelPorAll( ) {
+    public ResponseEntity<List<ArmazenamentoResponse>> consultarArmazenamentoPorAll( ) {
 
-        List<AdressResponse>  response = AdressMapper.mapToResponse(adressUseCase.buscaPorAdressAll());
+        List<ArmazenamentoResponse>  response = ArmazenamentoMapper.mapToResponse(armazenamentoUseCase.buscaPorArmazenamentolAll());
         return ResponseEntity.ok(response);
 
 
