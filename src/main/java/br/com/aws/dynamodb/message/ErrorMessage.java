@@ -20,7 +20,7 @@ public enum ErrorMessage {
     E0010("0010", "Código do Language não foi encontrado"),
     E0011("0011", "Código do Pagamento não foi encontrado"),
     E0012("0012", "Código do Aluguel não foi encontrado"),
-    E0013("0013", "Código do Staff não foi encontrado"),
+    E0013("0013", "Código do Pessoa não foi encontrado"),
     E0014("0014", "Código do Armazenamento não foi encontrado"),
     E9998("E9998", "Ocorreu um erro no sistemas consulte o  Administrador");
 

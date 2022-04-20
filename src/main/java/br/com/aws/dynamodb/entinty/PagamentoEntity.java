@@ -14,10 +14,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class PaymentEntity {
+@Table(name = "payment")
+public class PagamentoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long paymentId;
+    private Integer payment_id;
     @Column(name = "customer_id")
     private Long customerId;
     @Column(name = "staff_id")

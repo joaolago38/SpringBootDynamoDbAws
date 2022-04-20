@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class StaffDto {
+public class PessoaDto {
     @JsonProperty(value = "staff_id")
     @NotNull(message ="O campo id deve ser preenchido.")
     private Long staff_id;

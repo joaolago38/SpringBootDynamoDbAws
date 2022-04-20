@@ -1,12 +1,15 @@
-package br.com.aws.dynamodb.dto;
+package br.com.aws.dynamodb.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class PaymentDto {
-
+@Data
+@Builder
+public class PagamentoResponse {
     @JsonProperty(value = "paymentId")
     @NotNull(message ="O campo id deve ser preenchido.")
     private Long paymentId;

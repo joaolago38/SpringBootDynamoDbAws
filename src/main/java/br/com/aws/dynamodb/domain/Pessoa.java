@@ -9,8 +9,8 @@ import java.util.Date;
 @Data
 @Builder
 @AllArgsConstructor
-public class Staff {
-    private Long staff_id;
+public class Pessoa {
+    private Integer staff_id;
     private String first_name;
     private String last_name;
     private Long address_id;

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class LanguageDto {
+public class LanguagemDto {
 
     @JsonProperty(value = "languageId")
     @NotNull(message ="O campo id deve ser preenchido.")

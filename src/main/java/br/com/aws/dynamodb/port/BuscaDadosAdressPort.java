@@ -1,6 +1,5 @@
 package br.com.aws.dynamodb.port;
 
-import br.com.aws.dynamodb.domain.Actor;
 import br.com.aws.dynamodb.domain.Adress;
 
 import java.util.List;

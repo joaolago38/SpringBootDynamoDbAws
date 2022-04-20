@@ -9,9 +9,9 @@ import java.util.Date;
 @Data
 @Builder
 @AllArgsConstructor
-public class Language {
+public class Linguagem {
 
-    private  Long language_id;
+    private  Integer language_id;
     private String name;
     private Date last_update;
 

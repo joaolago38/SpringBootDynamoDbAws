@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-import static br.com.aws.dynamodb.message.ErrorMessage.E000;
+
 import static br.com.aws.dynamodb.message.ErrorMessage.E001;
 
 @Service
@@ -23,7 +23,7 @@ public class AdressUseCase {
         var adressRetorno = buscaDadosAdressPort.buscarAdressPorCodigoId(addressId);
         if(adressRetorno.isEmpty()){
             throw new ErroNegocioMensagemException(
-                    E000.getCodigo(), E000.getMensagem(), new ArrayList<>());
+                    E001.getCodigo(), E001.getMensagem(), new ArrayList<>());
         }
 
         return adressRetorno;

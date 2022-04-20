@@ -13,10 +13,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class LanguageEntity {
+@Table(name = "language")
+public class LinguagemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  Long languageId;
+    private  Integer languageId;
     @Column(name = "name")
     private String name;
     @Column(name = "last_update")
